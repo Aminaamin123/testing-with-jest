@@ -23,5 +23,5 @@ test('peek on stack returns the lenght', () => {
   stack.push(40);
   stack.push(9);
   stack.push(9);
-  expect(stack.length).toBe(4);
+  expect(stack.displayLength()).toBe(4);
 });

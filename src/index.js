@@ -7,7 +7,7 @@ window.onload = function () {
     var push = document.getElementById('push');
     var peek = document.getElementById('peek');
     var display = document.getElementById('top_of_stack');
-    var displayLenght = document.getElementById('displayLenght');
+    var displayLength = document.getElementById('displayLength');
 
     pop.addEventListener("click", function() {
         var text = "Tog bort " + stack.pop();
@@ -24,8 +24,8 @@ window.onload = function () {
         display.innerHTML = stack.peek();
     });
 
-    displayLenght.addEventListener("click", function(){
-         display.innerHTML =  stack.displayLenght();
+    displayLength.addEventListener("click", function(){
+         display.innerHTML =  stack.displayLength();
     });
 
 };

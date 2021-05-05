@@ -19,6 +19,6 @@ exports.peek = function () {
 }
 
 // Returnerar längden på stacken
-exports.displayLenght = function () {
-    return stack.lenght;
+exports.displayLength = function () {
+    return stack.length;
 }
