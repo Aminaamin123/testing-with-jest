@@ -18,10 +18,11 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('peek on stack returns the lenght', () => {
+test('peek on stack a stack with 8 returns the lenght of 8', () => {
+    //eftersom vi redan lagt till fyra i listan, behöver vi bara lägga till 4 till
   stack.push(5);
   stack.push(40);
   stack.push(9);
   stack.push(9);
-  expect(stack.displayLength()).toBe(4);
+  expect(stack.displayLength()).toBe(8);
 });

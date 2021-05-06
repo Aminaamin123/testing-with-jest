@@ -34,14 +34,10 @@ test('peek on stack with one element returns that element', async () => {
 });
 
 test('see lenght with two element returns that lenght', async () => {
+  //eftersom vi redan klickat en gång innan, behöver vi bara klicka en gång till för att få två i listan
   var add = await driver.findElement(By.id('push'));
   await add.click();
   var alert = await driver.switchTo().alert();
-  await alert.sendKeys("1");
-  await alert.accept();
-  add = await driver.findElement(By.id('push'));
-  await add.click();
-  alert = await driver.switchTo().alert();
   await alert.sendKeys("66");
   await alert.accept();
   add = await driver.findElement(By.id('displayLength'));
