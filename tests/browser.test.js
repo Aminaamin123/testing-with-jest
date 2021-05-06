@@ -23,6 +23,33 @@ test('The stack should be empty in the beginning', async () => {
 	expect(stack).toEqual("n/a");
 });
 
+test('peek on stack with one element returns that element', async () => {
+  let add = await driver.findElement(By.id('push'));
+  await add.click();
+  let alert = await driver.switchTo().alert();
+  await alert.sendKeys("1");
+  await alert.accept();
+  let stack = await driver.findElement(By.id('top_of_stack')).getText();
+	expect(stack).toEqual("1");
+});
+
+test('see lenght with two element returns that lenght', async () => {
+  var add = await driver.findElement(By.id('push'));
+  await add.click();
+  var alert = await driver.switchTo().alert();
+  await alert.sendKeys("1");
+  await alert.accept();
+  add = await driver.findElement(By.id('push'));
+  await add.click();
+  alert = await driver.switchTo().alert();
+  await alert.sendKeys("66");
+  await alert.accept();
+  add = await driver.findElement(By.id('displayLength'));
+  await add.click();
+  let stack = await driver.findElement(By.id('top_of_stack')).getText();
+	expect(stack).toEqual("2");
+});
+
 describe('Clicking "Pusha till stacken"', () => {
 	it('should open a prompt box', async () => {
 		let push = await driver.findElement(By.id('push'));
